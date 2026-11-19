@@ -6,72 +6,127 @@
 <title>‘til i found u — Happy Birthday Afra 🌸</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#4e654b;
-  --bg-deep:#364834;
-  --card:rgba(41, 56, 40, 0.74);
-  --card-solid:#394c37;
-  --cream:#f4f2ea;
-  --cream-soft:#dcd9cc;
-  --blossom:#ffffff;
-  --pink:#e896a6;
-  --pink-glow:rgba(232, 150, 166, 0.35);
-  --gold:#f2d29b;
-  --gold-glow:rgba(242, 210, 155, 0.45);
-  --bark:#232c20;
-  --border:rgba(244, 242, 234, 0.25);
+  /* Watercolor & Fine-Line Sepia Ink Palette */
+  --bg-cream:#fbf4ed;
+  --bg-parchment:#f8ede3;
+  --peach-wash:#f2c6b6;
+  --peach-deep:#e4a592;
+  --blush-soft:#f6d9d2;
+  --card:rgba(255, 250, 244, 0.88);
+  --card-inner:rgba(252, 243, 234, 0.78);
+  --ink:#2f221d;
+  --ink-soft:#5a453d;
+  --ink-muted:#7d655b;
+  --rose:#d47286;
+  --rose-deep:#b95569;
+  --rose-glow:rgba(212, 114, 134, 0.28);
+  --sage:#8ea182;
+  --gold:#d99f4c;
+  --gold-glow:rgba(217, 159, 76, 0.35);
+  --border:#4a3730;
+  --border-soft:rgba(74, 55, 48, 0.28);
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
 }
+
 html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+
 body{
   margin:0;
   min-height:100%;
   display:grid;
   place-items:center;
-  padding:24px 16px 76px;
+  padding:26px 16px 84px;
   background:
-    radial-gradient(circle at 25% 20%, rgba(114, 142, 108, 0.45), transparent 55%),
-    radial-gradient(circle at 80% 80%, rgba(36, 49, 34, 0.75), transparent 60%),
-    linear-gradient(160deg, #566f53 0%, #445a41 50%, #324430 100%);
-  color:var(--cream);
-  font:400 16px/1.75 "Cormorant Garamond", Georgia, serif;
+    radial-gradient(ellipse at 14% 16%, rgba(235, 173, 154, 0.55) 0%, transparent 48%),
+    radial-gradient(ellipse at 86% 22%, rgba(243, 200, 187, 0.62) 0%, transparent 52%),
+    radial-gradient(ellipse at 22% 84%, rgba(238, 182, 165, 0.48) 0%, transparent 50%),
+    radial-gradient(ellipse at 82% 88%, rgba(164, 181, 151, 0.24) 0%, transparent 45%),
+    linear-gradient(155deg, #fcf6f0 0%, #f8ece1 52%, #f4e2d5 100%);
+  color:var(--ink);
+  font:500 16.5px/1.75 "Cormorant Garamond", Georgia, serif;
   overflow-x:hidden;
   position:relative;
 }
+
+/* Subtle Watercolor Paper Grain Overlay */
 body::before{
   content:"";
   position:fixed;
   inset:0;
   pointer-events:none;
-  background-image:radial-gradient(rgba(255,255,255,0.04) 1px, transparent 0);
-  background-size:24px 24px;
+  background-image:
+    radial-gradient(rgba(74, 55, 48, 0.045) 1px, transparent 0),
+    radial-gradient(rgba(212, 114, 134, 0.035) 1px, transparent 0);
+  background-size:22px 22px, 31px 31px;
+  background-position:0 0, 11px 14px;
   z-index:0;
 }
+
+/* Decorative Hand-Drawn Ink & Watercolor Corner Branches */
+.bg-botanicals{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
+}
+.branch-top-left{
+  position:absolute;
+  top:-14px;
+  left:-18px;
+  width:min(340px, 56vw);
+  opacity:0.88;
+  transform-origin:top left;
+  animation:gentleBranch 7s ease-in-out infinite alternate;
+}
+.branch-bottom-right{
+  position:absolute;
+  bottom:-18px;
+  right:-18px;
+  width:min(310px, 52vw);
+  opacity:0.82;
+  transform-origin:bottom right;
+  animation:gentleBranch 8s ease-in-out infinite alternate-reverse;
+}
+@keyframes gentleBranch{
+  from{transform:rotate(-0.8deg) scale(1)}
+  to{transform:rotate(0.9deg) scale(1.015)}
+}
+
+/* Floating Watercolor Petals */
 .petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
 .petal{
   position:absolute;
   top:-10%;
-  width:10px;
-  height:14px;
-  background:var(--cream);
+  width:12px;
+  height:16px;
+  background:#fffaf6;
+  border:1px solid rgba(74, 55, 48, 0.38);
   border-radius:100% 0 100% 0;
-  opacity:0.45;
-  filter:blur(0.4px);
+  opacity:0.75;
+  box-shadow:0 2px 6px rgba(212, 114, 134, 0.16);
   animation:fall linear infinite;
 }
-.petal.pink{background:var(--pink);opacity:0.75;width:12px;height:16px}
+.petal.pink{
+  background:linear-gradient(135deg, #f7c5cf 0%, #e48b9d 100%);
+  border:1px solid rgba(74, 55, 48, 0.42);
+  opacity:0.85;
+  width:13px;
+  height:17px;
+}
 @keyframes fall{
   0%{transform:translateY(-10vh) rotate(0deg) translateX(0);opacity:0}
-  15%{opacity:0.65}
-  85%{opacity:0.5}
-  100%{transform:translateY(110vh) rotate(320deg) translateX(35px);opacity:0}
+  15%{opacity:0.82}
+  85%{opacity:0.72}
+  100%{transform:translateY(110vh) rotate(320deg) translateX(38px);opacity:0}
 }
 
-/* Floating Sound Control */
+/* Floating Sound Control (Cream Parchment & Sepia Ink Pill) */
 .sound-dock{
   position:fixed;
   right:14px;
@@ -80,29 +135,31 @@ body::before{
   display:flex;
   align-items:center;
   gap:8px;
-  padding:7px 12px;
+  padding:7px 13px;
   border-radius:999px;
-  background:rgba(31, 43, 30, 0.86);
+  background:rgba(255, 249, 242, 0.92);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
-  border:1px solid var(--border);
-  box-shadow:0 10px 26px rgba(16, 24, 15, 0.45);
-  font:italic 400 13px "Cormorant Garamond", serif;
-  color:var(--cream);
+  border:1.5px solid var(--border);
+  box-shadow:0 8px 22px rgba(74, 55, 48, 0.16), 0 2px 0 rgba(74, 55, 48, 0.08);
+  font:italic 600 13.5px "Cormorant Garamond", serif;
+  color:var(--ink);
 }
 .sound-btn{
-  background:var(--cream);
-  color:var(--bark);
-  border:none;
+  background:var(--ink);
+  color:#fffaf4;
+  border:1px solid var(--ink);
   border-radius:999px;
-  padding:4px 11px;
-  font:italic 600 13px "Playfair Display", serif;
+  padding:4px 12px;
+  font:italic 600 12.5px "Playfair Display", serif;
   cursor:pointer;
+  transition:background .2s, transform .15s;
 }
-.sound-btn.muted{background:rgba(244,242,234,0.18);color:var(--pink)}
+.sound-btn:hover{background:var(--rose-deep);border-color:var(--rose-deep)}
+.sound-btn.muted{background:var(--blush-soft);color:var(--ink);border-color:var(--border)}
 .vol-slider{
   width:64px;
-  accent-color:var(--pink);
+  accent-color:var(--rose-deep);
   cursor:pointer;
 }
 .sound-note{
@@ -110,21 +167,28 @@ body::before{
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
-  color:var(--cream-soft);
+  color:var(--ink-soft);
 }
 
 main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 [hidden]{display:none!important}
-.screen{width:min(100%,410px);text-align:center;animation:fadeIn .7s ease}
+.screen{width:min(100%,420px);text-align:center;animation:fadeIn .7s ease}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
+/* Watercolor & Fine-Line Ink Card Frame */
 .win{
-  background:var(--card);
+  background:
+    radial-gradient(circle at 12% 14%, rgba(242, 198, 182, 0.34), transparent 46%),
+    radial-gradient(circle at 88% 85%, rgba(245, 212, 202, 0.38), transparent 48%),
+    var(--card);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
-  border:1px solid var(--border);
-  border-radius:16px;
-  box-shadow:0 18px 45px rgba(20, 29, 19, 0.45), inset 0 0 24px rgba(244, 242, 234, 0.04);
+  border:1.5px solid var(--border);
+  border-radius:18px;
+  box-shadow:
+    0 18px 40px rgba(84, 58, 48, 0.16),
+    0 3px 0 rgba(74, 55, 48, 0.12),
+    inset 0 0 0 3px rgba(255, 252, 248, 0.72);
   overflow:hidden;
 }
 .bar{
@@ -132,27 +196,40 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
   align-items:center;
   justify-content:space-between;
   padding:10px 16px;
-  border-bottom:1px solid var(--border);
-  background:rgba(34, 46, 33, 0.45);
+  border-bottom:1px solid var(--border-soft);
+  background:linear-gradient(90deg, rgba(244, 211, 199, 0.45), rgba(252, 243, 234, 0.65));
 }
 .dots{display:flex;gap:6px;align-items:center}
-.dots i{width:7px;height:7px;border-radius:50%;background:var(--cream-soft);opacity:0.45}
-.dots i.bloom{background:var(--pink);opacity:1;box-shadow:0 0 8px var(--pink)}
+.dots i{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#fffaf4;
+  border:1.2px solid var(--border);
+  opacity:0.7;
+}
+.dots i.bloom{
+  background:var(--rose);
+  border-color:var(--border);
+  opacity:1;
+  box-shadow:0 0 8px var(--rose-glow);
+}
 .bar b{
-  font:italic 400 13px "Playfair Display", Georgia, serif;
-  letter-spacing:.06em;
-  color:var(--cream-soft);
+  font:italic 600 13.5px "Playfair Display", Georgia, serif;
+  letter-spacing:.05em;
+  color:var(--ink-soft);
 }
 .body{padding:26px 22px 22px}
 
 .blossom-wrap{
-  width:74px;
-  height:74px;
+  width:84px;
+  height:84px;
   margin:0 auto 10px;
   display:grid;
   place-items:center;
   border-radius:50%;
-  background:radial-gradient(circle, var(--pink-glow) 0%, transparent 70%);
+  background:radial-gradient(circle, rgba(242, 198, 182, 0.55) 0%, rgba(255, 250, 244, 0.2) 68%, transparent 75%);
+  border:1px dashed rgba(74, 55, 48, 0.28);
   animation:sway 3.5s ease-in-out infinite alternate;
 }
 @keyframes sway{
@@ -161,132 +238,163 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 }
 
 .eyebrow{
-  margin:0 0 12px;
-  font:italic 400 14px "Cormorant Garamond", serif;
-  letter-spacing:.12em;
-  color:var(--cream-soft);
+  margin:0 0 10px;
+  font:italic 600 15px "Cormorant Garamond", serif;
+  letter-spacing:.08em;
+  color:var(--ink-soft);
+}
+
+/* Handwritten Script Title matching "her" & "‘til i found u" artwork */
+.script-hero{
+  display:block;
+  margin:0 0 4px;
+  font:600 clamp(38px, 10vw, 48px)/1 "Caveat", cursive;
+  color:var(--ink);
+  letter-spacing:.01em;
 }
 .lyric-title{
   display:block;
-  margin:6px 0 10px;
-  font:400 clamp(34px, 9vw, 44px)/1.05 "Playfair Display", Georgia, serif;
-  color:var(--cream);
-  text-shadow:0 2px 14px rgba(20,29,19,0.4);
+  margin:4px 0 10px;
+  font:600 clamp(32px, 8.5vw, 40px)/1.12 "Playfair Display", Georgia, serif;
+  color:var(--ink);
 }
 .lyric-title em{
-  font-style:italic;
-  color:var(--pink);
-  font-weight:400;
+  font-family:"Caveat", cursive;
+  font-style:normal;
+  font-weight:700;
+  font-size:1.25em;
+  color:var(--rose-deep);
 }
 .ask{
-  margin:12px 0 20px;
-  font:italic 400 22px/1.35 "Playfair Display", Georgia, serif;
-  color:var(--cream);
+  margin:10px 0 20px;
+  font:italic 500 22px/1.38 "Playfair Display", Georgia, serif;
+  color:var(--ink);
 }
 .lyric-quote{
   margin:10px 0;
-  font:italic 400 16px/1.55 "Cormorant Garamond", serif;
-  color:var(--cream-soft);
+  font:italic 600 17px/1.55 "Cormorant Garamond", serif;
+  color:var(--ink-soft);
 }
 .small{
   margin:14px 0 0;
-  font:italic 400 13px "Cormorant Garamond", serif;
-  letter-spacing:.08em;
-  color:var(--cream-soft);
-  opacity:0.8;
+  font:italic 600 14px "Cormorant Garamond", serif;
+  letter-spacing:.06em;
+  color:var(--ink-muted);
 }
 
+/* Fine-Line Ink & Blush Watercolor Buttons */
 .btn{
   font:italic 600 15px "Playfair Display", Georgia, serif;
   letter-spacing:.04em;
-  color:var(--bark);
-  background:var(--cream);
-  border:1px solid var(--cream);
+  color:#fffaf5;
+  background:linear-gradient(180deg, #de7e91 0%, #c66276 100%);
+  border:1.5px solid var(--border);
   border-radius:999px;
   padding:10px 24px;
-  box-shadow:0 6px 20px rgba(20, 29, 19, 0.35);
+  box-shadow:0 5px 16px rgba(185, 85, 105, 0.25), 0 2px 0 var(--border);
   cursor:pointer;
-  transition:transform .2s, background .2s, box-shadow .2s;
+  transition:transform .18s, background .2s, box-shadow .2s;
   touch-action:manipulation;
 }
-.btn:hover{background:#fff;box-shadow:0 8px 24px var(--pink-glow)}
-.btn:active{transform:translateY(2px)}
-.btn:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+.btn:hover{
+  background:linear-gradient(180deg, #e5889b 0%, #cf6a7e 100%);
+  box-shadow:0 7px 20px rgba(185, 85, 105, 0.34), 0 2px 0 var(--border);
+}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 8px rgba(185, 85, 105, 0.22)}
+.btn:focus-visible{outline:2px solid var(--rose-deep);outline-offset:3px}
 .btn.ghost{
-  background:transparent;
-  color:var(--cream-soft);
-  border:1px solid var(--border);
-  box-shadow:none;
+  background:rgba(255, 250, 244, 0.85);
+  color:var(--ink-soft);
+  border:1.5px solid var(--border-soft);
+  box-shadow:0 2px 8px rgba(74, 55, 48, 0.08);
 }
 .btn.ghost:hover{
-  background:rgba(244, 242, 234, 0.08);
-  color:var(--cream);
+  background:#fff;
+  color:var(--ink);
+  border-color:var(--border);
 }
 
-#arena{position:relative;height:86px;display:flex;justify-content:center;align-items:center;gap:16px}
+#arena{position:relative;height:88px;display:flex;justify-content:center;align-items:center;gap:16px}
 #yes{position:relative;z-index:2;transition:transform .25s}
 #no{transition:left .18s ease-out,top .18s ease-out}
 
-.cur{animation:blink 1.1s steps(1) infinite;color:var(--pink)}
+.cur{animation:blink 1.1s steps(1) infinite;color:var(--rose-deep)}
 @keyframes blink{50%{opacity:0}}
 
-.bars{display:flex;gap:5px;justify-content:center;margin:8px 0 18px;flex-wrap:wrap}
-.bars i{width:28px;height:3px;border-radius:2px;background:rgba(244,242,234,0.2);transition:background .3s}
-.bars i.on{background:var(--pink);box-shadow:0 0 8px var(--pink)}
+.bars{display:flex;gap:6px;justify-content:center;margin:8px 0 18px;flex-wrap:wrap}
+.bars i{
+  width:28px;
+  height:4px;
+  border-radius:3px;
+  background:rgba(74, 55, 48, 0.16);
+  border:1px solid rgba(74, 55, 48, 0.2);
+  transition:background .3s;
+}
+.bars i.on{
+  background:var(--rose);
+  border-color:var(--border);
+  box-shadow:0 0 8px var(--rose-glow);
+}
 
 #art{
-  height:180px;
+  height:185px;
   display:grid;
   place-items:center;
   padding:16px;
-  background:radial-gradient(circle at center, rgba(232,150,166,0.14), rgba(29,40,28,0.45));
-  border-bottom:1px solid var(--border);
+  background:
+    radial-gradient(circle at 30% 35%, rgba(242, 198, 182, 0.52), transparent 58%),
+    radial-gradient(circle at 75% 70%, rgba(212, 114, 134, 0.16), transparent 55%),
+    rgba(253, 246, 239, 0.9);
+  border-bottom:1px solid var(--border-soft);
 }
 .art-inner{
-  font:italic 400 22px/1.4 "Playfair Display", Georgia, serif;
-  color:var(--cream);
+  font:600 28px/1.3 "Caveat", cursive;
+  color:var(--ink);
 }
 .art-inner span{
   display:block;
   font-size:38px;
-  margin-bottom:8px;
+  margin-bottom:6px;
   font-style:normal;
 }
 .cap{
   margin:0;
   padding:16px 20px;
-  font:400 16px/1.7 "Cormorant Garamond", serif;
-  color:var(--cream);
+  font:500 16.5px/1.7 "Cormorant Garamond", serif;
+  color:var(--ink);
 }
 .foot{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:8px 16px;
-  border-top:1px solid var(--border);
-  font:italic 400 12px "Cormorant Garamond", serif;
-  letter-spacing:.08em;
-  color:var(--cream-soft);
+  border-top:1px solid var(--border-soft);
+  background:rgba(247, 233, 222, 0.55);
+  font:italic 600 13px "Cormorant Garamond", serif;
+  letter-spacing:.06em;
+  color:var(--ink-soft);
 }
 
-/* Mini-game styles */
+/* Mini-game styles (Soft Watercolor & Ink Theme) */
 .hud{
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:8px;
   padding:8px 14px;
-  border-bottom:1px solid var(--border);
-  background:rgba(28, 39, 27, 0.55);
-  font:italic 400 13px "Cormorant Garamond", serif;
+  border-bottom:1px solid var(--border-soft);
+  background:rgba(245, 224, 212, 0.65);
+  font:italic 600 14px "Cormorant Garamond", serif;
+  color:var(--ink);
 }
-.hud b{color:var(--pink);font-weight:600}
+.hud b{color:var(--rose-deep);font-weight:700}
 #gameField{
   position:relative;
   height:260px;
   background:
-    radial-gradient(circle at 50% 35%, rgba(232,150,166,0.14), transparent 65%),
-    rgba(24, 34, 23, 0.55);
+    radial-gradient(circle at 50% 30%, rgba(242, 198, 182, 0.45), transparent 62%),
+    radial-gradient(circle at 20% 80%, rgba(164, 181, 151, 0.22), transparent 55%),
+    linear-gradient(180deg, #fdf7f1 0%, #f6e5d8 100%);
   overflow:hidden;
   touch-action:none;
   user-select:none;
@@ -300,14 +408,14 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 .drop{
   position:absolute;
   top:-36px;
-  font-size:21px;
+  font-size:22px;
   line-height:1;
   cursor:pointer;
   padding:4px;
   background:transparent;
   border:none;
   transform:translate(-50%, 0);
-  filter:drop-shadow(0 4px 10px rgba(0,0,0,0.4));
+  filter:drop-shadow(0 3px 6px rgba(74, 55, 48, 0.25));
 }
 .basket{
   position:absolute;
@@ -316,10 +424,10 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
   transform:translateX(-50%);
   padding:4px 14px;
   border-radius:999px;
-  background:rgba(244, 242, 234, 0.12);
-  border:1px solid var(--border);
-  font:italic 400 12px "Playfair Display", serif;
-  color:var(--cream-soft);
+  background:rgba(255, 250, 244, 0.9);
+  border:1.2px solid var(--border);
+  font:italic 600 12.5px "Playfair Display", serif;
+  color:var(--ink-soft);
   pointer-events:none;
 }
 .game-banner{
@@ -328,114 +436,122 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
   display:grid;
   place-items:center;
   padding:18px;
-  background:rgba(29, 41, 28, 0.86);
+  background:rgba(253, 246, 239, 0.92);
   backdrop-filter:blur(4px);
   z-index:4;
 }
-.game-banner p{margin:0 0 12px;font:italic 400 17px/1.45 "Playfair Display", serif;color:var(--cream)}
+.game-banner p{
+  margin:0 0 14px;
+  font:italic 500 17px/1.48 "Playfair Display", serif;
+  color:var(--ink);
+}
+.game-banner b{color:var(--rose-deep)}
 
 .rule{
   display:flex;
   align-items:center;
   gap:10px;
   margin:12px 0;
-  color:var(--pink);
-  font-size:13px;
+  color:var(--rose-deep);
+  font-size:14px;
 }
-.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--border)}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--border-soft)}
 
+/* Scrollable Parchment Love Letter */
 .paper{
-  padding:16px 16px 8px;
-  border-radius:10px;
-  background:rgba(28, 39, 27, 0.56);
-  border:1px solid rgba(244,242,234,0.14);
+  padding:18px 18px 10px;
+  border-radius:12px;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(242, 198, 182, 0.28), transparent 45%),
+    #fffcf8;
+  border:1.2px solid var(--border-soft);
+  box-shadow:inset 0 0 18px rgba(235, 196, 178, 0.22);
   text-align:left;
-  font:400 15.5px/1.78 "Cormorant Garamond", serif;
-  color:var(--cream);
+  font:500 16px/1.8 "Cormorant Garamond", serif;
+  color:var(--ink);
   max-height:330px;
   overflow-y:auto;
 }
 .paper::-webkit-scrollbar{width:5px}
-.paper::-webkit-scrollbar-thumb{background:rgba(232,150,166,0.45);border-radius:999px}
+.paper::-webkit-scrollbar-thumb{background:rgba(185, 85, 105, 0.45);border-radius:999px}
 .paper p{margin:0 0 12px}
 .paper p:last-child{margin-bottom:4px}
-.paper em{color:var(--pink);font-style:italic}
+.paper em{color:var(--rose-deep);font-style:italic;font-weight:600}
 .sign{margin:10px 0 0;text-align:right}
 
-/* Screen 5 · White Kitty Paw & Solitaire Ring Promise */
+/* Screen 5 · White Kitty Paw & Solitaire Ring Promise (Matches Reference 3 Artwork) */
 #s5 .win{
   background:
-    radial-gradient(circle at 22% 18%, rgba(114, 136, 104, 0.42) 0%, transparent 48%),
-    radial-gradient(circle at 78% 26%, rgba(82, 102, 74, 0.5) 0%, transparent 52%),
-    radial-gradient(circle at 30% 78%, rgba(64, 82, 57, 0.55) 0%, transparent 50%),
-    radial-gradient(circle at 80% 82%, rgba(99, 120, 91, 0.36) 0%, transparent 46%),
-    linear-gradient(165deg, #5c7154 0%, #4e6247 52%, #3f5139 100%);
-  border:1px solid rgba(244, 242, 234, 0.32);
+    radial-gradient(circle at 18% 20%, rgba(240, 191, 173, 0.45) 0%, transparent 50%),
+    radial-gradient(circle at 84% 25%, rgba(245, 207, 194, 0.48) 0%, transparent 52%),
+    radial-gradient(circle at 30% 82%, rgba(238, 185, 168, 0.35) 0%, transparent 50%),
+    #fffaf4;
+  border:1.5px solid var(--border);
   box-shadow:
-    0 24px 55px rgba(18, 26, 16, 0.58),
-    inset 0 0 38px rgba(32, 43, 28, 0.45);
+    0 22px 48px rgba(84, 58, 48, 0.2),
+    0 3px 0 rgba(74, 55, 48, 0.14),
+    inset 0 0 0 3px rgba(255, 253, 250, 0.8);
   position:relative;
 }
 #s5 .bar{
-  background:rgba(31, 42, 28, 0.62);
-  border-bottom:1px solid rgba(244, 242, 234, 0.24);
+  background:linear-gradient(90deg, rgba(242, 198, 182, 0.52), rgba(253, 245, 237, 0.75));
+  border-bottom:1px solid var(--border-soft);
 }
 #s5 .bar b{
-  color:var(--cream);
-  letter-spacing:.08em;
+  color:var(--ink);
+  letter-spacing:.06em;
 }
 #s5 .body{
   position:relative;
-  padding:22px 18px 20px;
+  padding:20px 18px 20px;
 }
 
 .promise-kicker{
-  margin:0 0 4px;
-  font:italic 400 13.5px "Cormorant Garamond", serif;
-  letter-spacing:.16em;
-  color:var(--cream-soft);
+  margin:0 0 2px;
+  font:600 24px/1.1 "Caveat", cursive;
+  color:var(--ink-soft);
 }
 .promise-title{
   margin:4px 0 14px;
-  font:400 clamp(21px, 5.4vw, 24px)/1.35 "Playfair Display", Georgia, serif;
-  color:#f7f5ee;
-  text-shadow:0 2px 14px rgba(24, 33, 21, 0.55);
+  font:italic 500 clamp(19.5px, 5vw, 22.5px)/1.38 "Playfair Display", Georgia, serif;
+  color:var(--ink);
 }
 .promise-title em{
   font-style:italic;
-  color:#f4c2cc;
-  font-weight:400;
+  color:var(--rose-deep);
+  font-weight:600;
 }
 
-/* Stage Canvas Container */
+/* Stage Canvas Container — Watercolor Parchment Frame */
 .ring-stage{
   position:relative;
-  height:270px;
+  height:275px;
   margin:8px 0 14px;
   border-radius:14px;
   background:
-    radial-gradient(ellipse at 50% 30%, rgba(135, 162, 126, 0.35) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 80%, rgba(67, 85, 60, 0.5) 0%, transparent 50%),
-    linear-gradient(170deg, #597052 0%, #475a42 50%, #364632 100%);
-  border:1px solid rgba(244, 242, 234, 0.28);
+    radial-gradient(ellipse at 25% 28%, rgba(238, 182, 164, 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse at 78% 68%, rgba(244, 203, 190, 0.58) 0%, transparent 58%),
+    radial-gradient(ellipse at 45% 88%, rgba(164, 181, 151, 0.26) 0%, transparent 45%),
+    linear-gradient(165deg, #fcf4ec 0%, #f6e3d5 52%, #f1d7c7 100%);
+  border:1.5px solid var(--border);
   overflow:hidden;
   display:grid;
   place-items:center;
   box-shadow:
-    inset 0 0 28px rgba(28, 39, 25, 0.55),
-    0 10px 26px rgba(18, 26, 16, 0.42);
+    inset 0 0 22px rgba(214, 157, 138, 0.28),
+    0 8px 20px rgba(74, 55, 48, 0.14);
 }
 
-/* Golden Halo behind ring placement */
+/* Warm Sunlit Halo behind ring placement */
 .ring-aura{
   position:absolute;
   top:47%;
   left:51%;
-  width:165px;
-  height:165px;
+  width:170px;
+  height:170px;
   transform:translate(-50%, -50%) scale(0.5);
   border-radius:50%;
-  background:radial-gradient(circle, rgba(255, 245, 220, 0.52) 0%, rgba(242, 210, 155, 0.25) 45%, transparent 75%);
+  background:radial-gradient(circle, rgba(255, 252, 240, 0.85) 0%, rgba(242, 198, 140, 0.35) 45%, transparent 75%);
   opacity:0;
   pointer-events:none;
 }
@@ -444,9 +560,9 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 }
 @keyframes auraBloom{
   0%{opacity:0;transform:translate(-50%, -50%) scale(0.5)}
-  45%{opacity:0.45;transform:translate(-50%, -50%) scale(0.88)}
-  65%{opacity:0.95;transform:translate(-50%, -50%) scale(1.18)}
-  100%{opacity:0.82;transform:translate(-50%, -50%) scale(1)}
+  45%{opacity:0.55;transform:translate(-50%, -50%) scale(0.88)}
+  65%{opacity:0.98;transform:translate(-50%, -50%) scale(1.18)}
+  100%{opacity:0.88;transform:translate(-50%, -50%) scale(1)}
 }
 
 .ring-svg{
@@ -461,7 +577,7 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 /* Gentle ambient sway on tree branches */
 .tree-canopy{
   transform-box:fill-box;
-  transform-origin:bottom center;
+  transform-origin:top left;
 }
 .ring-stage.animate .tree-canopy{
   animation:canopyBreeze 6s ease-in-out infinite alternate;
@@ -473,27 +589,27 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 
 /* Kitty Paw Rises Upward Smoothly from Bottom */
 .paw-group{
-  transform:translateY(42px);
+  transform:translateY(44px);
   opacity:0;
 }
 .ring-stage.animate .paw-group{
   animation:pawRise 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 @keyframes pawRise{
-  0%{transform:translateY(42px);opacity:0}
+  0%{transform:translateY(44px);opacity:0}
   100%{transform:translateY(0);opacity:1}
 }
 
-/* Solitaire Ring Descends straight down onto the kitty's middle toe */
+/* Solitaire Ring Descends smoothly onto the kitty's paw */
 .ring-group{
-  transform:translateY(-72px) scale(1.1);
+  transform:translateY(-74px) scale(1.1);
   opacity:0;
 }
 .ring-stage.animate .ring-group{
   animation:ringLower 2.1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
 }
 @keyframes ringLower{
-  0%{transform:translateY(-72px) scale(1.1);opacity:0}
+  0%{transform:translateY(-74px) scale(1.1);opacity:0}
   20%{opacity:1}
   80%{transform:translateY(1.5px) scale(1);opacity:1}
   100%{transform:translateY(0px) scale(1);opacity:1}
@@ -509,7 +625,7 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
   animation:diamondPulse 2.4s ease-in-out 2.5s infinite;
 }
 @keyframes diamondPulse{
-  0%,100%{opacity:0.3;transform:scale(0.75) rotate(0deg)}
+  0%,100%{opacity:0.35;transform:scale(0.75) rotate(0deg)}
   50%{opacity:1;transform:scale(1.3) rotate(22deg)}
 }
 
@@ -530,24 +646,24 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
   100%{opacity:0;transform:scale(2.3)}
 }
 
-/* Floating Sparkles */
+/* Floating Ink & Rose Sparkles */
 .twinkle{
   position:absolute;
-  color:#f7f4e8;
-  font-size:12px;
+  color:var(--ink);
+  font-size:13px;
   pointer-events:none;
   opacity:0;
   z-index:3;
-  text-shadow:0 0 10px rgba(255, 248, 224, 0.75);
+  text-shadow:0 0 8px rgba(255, 255, 255, 0.95);
 }
 .ring-stage.animate .twinkle{
   animation:twinkleFloat 3.1s ease-in-out infinite;
 }
-.twinkle.t1{top:16%;left:22%;animation-delay:2.1s}
-.twinkle.t2{top:20%;right:18%;color:#f2b6c2;font-size:14px;animation-delay:2.4s}
-.twinkle.t3{bottom:26%;left:14%;color:#fff9e6;font-size:11px;animation-delay:2.7s}
-.twinkle.t4{bottom:22%;right:18%;color:#f2d29b;animation-delay:3.0s}
-.twinkle.t5{top:10%;left:50%;color:#fff9e6;font-size:11px;animation-delay:2.3s}
+.twinkle.t1{top:18%;left:62%;animation-delay:2.1s}
+.twinkle.t2{top:26%;right:14%;color:var(--rose-deep);font-size:15px;animation-delay:2.4s}
+.twinkle.t3{bottom:30%;left:26%;color:var(--ink-soft);font-size:12px;animation-delay:2.7s}
+.twinkle.t4{bottom:24%;right:16%;color:var(--gold);animation-delay:3.0s}
+.twinkle.t5{top:14%;left:48%;color:var(--rose);font-size:12px;animation-delay:2.3s}
 @keyframes twinkleFloat{
   0%,100%{opacity:0;transform:translateY(5px) scale(0.65)}
   50%{opacity:0.95;transform:translateY(-6px) scale(1.15)}
@@ -559,14 +675,14 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
   left:50%;
   transform:translateX(-50%);
   z-index:3;
-  padding:4px 14px;
+  padding:4px 15px;
   border-radius:999px;
-  background:rgba(28, 38, 25, 0.88);
-  border:1px solid rgba(244, 242, 234, 0.34);
-  box-shadow:0 4px 14px rgba(14, 20, 12, 0.42);
-  font:italic 400 12.5px "Playfair Display", serif;
+  background:rgba(255, 250, 244, 0.94);
+  border:1.3px solid var(--border);
+  box-shadow:0 4px 12px rgba(74, 55, 48, 0.16);
+  font:italic 600 12.5px "Playfair Display", serif;
   letter-spacing:.03em;
-  color:#f4f2ea;
+  color:var(--ink);
   white-space:nowrap;
   opacity:0;
 }
@@ -580,8 +696,8 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 
 .promise-sub{
   margin:8px 0 4px;
-  font:italic 400 15.5px/1.62 "Cormorant Garamond", serif;
-  color:var(--cream-soft);
+  font:italic 600 16px/1.62 "Cormorant Garamond", serif;
+  color:var(--ink-soft);
 }
 .promise-actions{
   display:flex;
@@ -593,7 +709,7 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 }
 
 @media (prefers-reduced-motion:reduce){
-  .blossom-wrap,.cur,.petal,#gameField.shake,
+  .blossom-wrap,.cur,.petal,#gameField.shake,.branch-top-left,.branch-bottom-right,
   .ring-stage.animate .ring-aura,
   .ring-stage.animate .tree-canopy,
   .ring-stage.animate .paw-group,
@@ -611,6 +727,63 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 </style>
 </head>
 <body>
+
+<!-- Decorative Hand-Drawn Ink & Watercolor Almond Blossom Branches (Ambient Backdrop) -->
+<div class="bg-botanicals" aria-hidden="true">
+  <svg class="branch-top-left" viewBox="0 0 340 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Soft Watercolor Peach & Sage Washes -->
+    <ellipse cx="95" cy="85" rx="88" ry="62" fill="#e7a794" opacity="0.28"/>
+    <ellipse cx="185" cy="52" rx="68" ry="42" fill="#f2c4b5" opacity="0.34"/>
+    <circle cx="122" cy="135" r="26" fill="#9fb092" opacity="0.22"/>
+    <!-- Fine-Line Sepia Ink Trunk & Branches -->
+    <path d="M-10 245 C25 180, 42 125, 36 45 C34 22, 26 5, 18 -10" stroke="#2f221d" stroke-width="2.2" fill="none"/>
+    <path d="M44 250 C62 195, 76 145, 86 105 C135 92, 195 78, 265 42" stroke="#2f221d" stroke-width="2" fill="none"/>
+    <path d="M84 92 C132 76, 188 60, 255 34" stroke="#2f221d" stroke-width="1.6" fill="none"/>
+    <path d="M128 84 C162 104, 194 112, 226 108" stroke="#2f221d" stroke-width="1.4" fill="none"/>
+    <path d="M72 52 C108 32, 148 18, 192 8" stroke="#2f221d" stroke-width="1.5" fill="none"/>
+    <!-- White Hand-Drawn Blossoms -->
+    <g transform="translate(152, 74)">
+      <circle cx="-6" cy="-4" r="7" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+      <circle cx="6" cy="-4" r="7" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+      <circle cx="8" cy="6" r="6.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+      <circle cx="-7" cy="6" r="6.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+      <circle cx="0" cy="9" r="6.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+      <circle cx="0" cy="1" r="2.6" fill="#d47286"/>
+    </g>
+    <g transform="translate(218, 52)">
+      <circle cx="-5" cy="-3" r="6" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+      <circle cx="5" cy="-3" r="6" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+      <circle cx="5" cy="5" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+      <circle cx="-5" cy="5" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+      <circle cx="0" cy="1" r="2.2" fill="#8ea182"/>
+    </g>
+    <!-- Signature Single Pink Blossom -->
+    <g transform="translate(115, 118)">
+      <circle cx="-6" cy="-4" r="7.5" fill="#eda3b2" stroke="#2f221d" stroke-width="1.3"/>
+      <circle cx="6" cy="-4" r="7.5" fill="#e590a1" stroke="#2f221d" stroke-width="1.3"/>
+      <circle cx="7" cy="6" r="7" fill="#f2b2bf" stroke="#2f221d" stroke-width="1.3"/>
+      <circle cx="-7" cy="6" r="7" fill="#e895a6" stroke="#2f221d" stroke-width="1.3"/>
+      <circle cx="0" cy="9" r="7" fill="#eda3b2" stroke="#2f221d" stroke-width="1.3"/>
+      <circle cx="0" cy="1" r="2.8" fill="#5a343b"/>
+    </g>
+  </svg>
+
+  <svg class="branch-bottom-right" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="220" cy="175" rx="85" ry="56" fill="#e8ab98" opacity="0.28"/>
+    <path d="M330 220 C270 190, 215 172, 145 168 C105 166, 70 176, 40 190" stroke="#2f221d" stroke-width="1.8" fill="none"/>
+    <path d="M245 186 C210 154, 178 134, 142 122" stroke="#2f221d" stroke-width="1.4" fill="none"/>
+    <!-- Delicate Ink Leaves & Blossoms (inspired by image 2) -->
+    <path d="M185 168 C172 145, 150 142, 138 156 C152 168, 172 172, 185 168 Z" fill="#e8b8a8" fill-opacity="0.55" stroke="#2f221d" stroke-width="1.2"/>
+    <path d="M235 182 C226 156, 206 150, 192 162 C204 176, 222 183, 235 182 Z" fill="#e8b8a8" fill-opacity="0.55" stroke="#2f221d" stroke-width="1.2"/>
+    <g transform="translate(142, 122)">
+      <circle cx="-5" cy="-3" r="5.8" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+      <circle cx="5" cy="-3" r="5.8" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+      <circle cx="5" cy="5" r="5.4" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+      <circle cx="-5" cy="5" r="5.4" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+      <circle cx="0" cy="1" r="2.1" fill="#d47286"/>
+    </g>
+  </svg>
+</div>
 
 <!-- Main Part to End: JVKE - her (starts at 0:27 through the end) -->
 <audio id="herAudio" preload="metadata">
@@ -644,17 +817,21 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
     </div>
     <div class="body">
       <div class="blossom-wrap" aria-hidden="true">
-        <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
-          <path d="M12 52C20 40 30 34 48 26" stroke="#222a20" stroke-width="3" stroke-linecap="round"/>
-          <path d="M28 38C26 28 20 22 14 20" stroke="#222a20" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="46" cy="24" r="5" fill="#f4f2ea"/>
-          <circle cx="51" cy="28" r="4.5" fill="#f4f2ea"/>
-          <circle cx="43" cy="30" r="4.5" fill="#f4f2ea"/>
-          <circle cx="47" cy="27" r="2" fill="#d9c99e"/>
-          <circle cx="29" cy="43" r="5.5" fill="#e896a6"/>
-          <circle cx="34" cy="46" r="5" fill="#f0a8b6"/>
-          <circle cx="26" cy="48" r="5" fill="#e28799"/>
-          <circle cx="30" cy="46" r="2" fill="#fff3f5"/>
+        <!-- Hand-Drawn Ink & Watercolor Blossom Branch Icon -->
+        <svg width="62" height="62" viewBox="0 0 64 64" fill="none">
+          <circle cx="38" cy="34" r="18" fill="#f2c6b6" opacity="0.45"/>
+          <path d="M11 53C20 41 31 34 50 25" stroke="#2f221d" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M27 39C25 28 19 22 13 20" stroke="#2f221d" stroke-width="1.6" stroke-linecap="round"/>
+          <!-- White ink-outlined blossom -->
+          <circle cx="46" cy="23" r="5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+          <circle cx="52" cy="27" r="4.6" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+          <circle cx="44" cy="30" r="4.6" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+          <circle cx="47" cy="27" r="2" fill="#8ea182"/>
+          <!-- Standout Pink Blossom -->
+          <circle cx="29" cy="43" r="5.5" fill="#eea1b1" stroke="#2f221d" stroke-width="1.3"/>
+          <circle cx="35" cy="46" r="5" fill="#e58e9f" stroke="#2f221d" stroke-width="1.3"/>
+          <circle cx="26" cy="48" r="5" fill="#f3b2bf" stroke="#2f221d" stroke-width="1.3"/>
+          <circle cx="30" cy="46" r="2" fill="#4a2c32"/>
         </svg>
       </div>
       <p class="ask">I made a little piece of my heart for you… wanna open it?</p>
@@ -675,12 +852,12 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
       <b>14 dec · for afra</b>
     </div>
     <div class="body">
-      <p class="eyebrow" style="margin-bottom:4px">with you, i’m alive</p>
-      <h1 class="lyric-title">Happy Birthday, <em>Afra</em></h1>
+      <p class="script-hero">‘til i found u</p>
+      <h1 class="lyric-title">Happy Birthday, <em>Afra</em> 🌸</h1>
       <p class="lyric-quote" aria-live="polite"><span id="typed"></span><span class="cur">|</span></p>
       <div id="note" hidden>
-        <p style="margin:12px 0 18px;color:var(--cream-soft)">
-          “i didn’t know what i was looking for, <em>‘til i found u</em>.”<br>
+        <p style="margin:12px 0 18px;color:var(--ink-soft)">
+          “i didn’t know what i was looking for, <em style="color:var(--rose-deep);font-weight:600">‘til i found u</em>.”<br>
           Today is all about celebrating the light you brought into my life.
         </p>
         <button class="btn" id="start">continue ‘til i found u →</button>
@@ -692,7 +869,7 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
 
 <!-- SCREEN 3 -->
 <section class="screen" id="s3" hidden>
-  <p class="eyebrow" id="mh" style="font-size:15px"></p>
+  <p class="eyebrow" id="mh" style="font-size:15.5px"></p>
   <div class="bars" id="bars">
     <i></i><i></i><i></i><i></i><i></i><i></i>
   </div>
@@ -733,7 +910,7 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
       </div>
       <div class="game-banner" id="gameWinBanner" hidden>
         <div>
-          <p>Incredible reflexes, <em>Afra</em> 🌸<br>You beat hard mode!</p>
+          <p>Incredible reflexes, <em style="color:var(--rose-deep);font-weight:600">Afra</em> 🌸<br>You beat hard mode!</p>
           <button class="btn" id="toLetterBtn">read my letter →</button>
         </div>
       </div>
@@ -771,12 +948,12 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
         <p>And the more I talked to you, the more deeply I fell in love with you. I don't even know why or how, but I just love you so much, <em>my Anan</em>.</p>
         <p>And then, on <em>October 2nd</em>, we officially started our relationship. I will never forget that day for the rest of my life. That day means so much to me.</p>
         <p>And lowkey, we even married each other without telling anyone. I know it's not official in the real world, but in my heart, you are my wife, and I am your husband.</p>
-        <p>Everything I said here comes straight from my heart. I truly love you so much, more than anyone else. <em>Please, don't ever leave me.</em></p>
+        <p>Everything I said here comes straight from my heart. I truly love you so much, more than anyone else.Please, don't ever leave me. <em>BTW HAPPY BIRTHDAY MYANAN MYWIFE MYEVERTHING</em></p>
       </div>
       <div class="rule">❀</div>
       <p class="sign">
-        <span style="font:italic 400 20px 'Playfair Display',serif;color:var(--cream)">‘til i found u, always —</span><br>
-        <span style="font:italic 600 16px 'Cormorant Garamond',serif;color:var(--pink)">your husband</span>
+        <span style="font:600 26px/1.1 'Caveat',cursive;color:var(--ink)">‘til i found u, always —</span><br>
+        <span style="font:italic 700 17px 'Cormorant Garamond',serif;color:var(--rose-deep)">your husband AhanafAbid</span>
       </p>
       <p style="margin:18px 0 2px">
         <button class="btn" id="toPromiseBtn">one last promise →</button>
@@ -786,7 +963,7 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
   </div>
 </section>
 
-<!-- SCREEN 5: WHITE CAT PAW & SOLITAIRE RING PROMISE -->
+<!-- SCREEN 5: WHITE CAT PAW & SOLITAIRE RING PROMISE (Matching Reference Image 3) -->
 <section class="screen" id="s5" hidden>
   <div class="win">
     <div class="bar">
@@ -794,10 +971,10 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
       <b>for my anan · promise</b>
     </div>
     <div class="body">
-      <p class="promise-kicker">beneath our almond blossoms</p>
+      <p class="promise-kicker">‘til i found u · for my anan</p>
       <h2 class="promise-title">“when I come back from <em>Dhaka</em>, I'll put a <em>ring</em> on your finger myself.”</h2>
 
-      <div class="ring-stage" id="ringStage" role="img" aria-label="Animated solitaire ring lowering onto a white kitty paw with pink toe beans beneath a painterly almond blossom canopy">
+      <div class="ring-stage" id="ringStage" role="img" aria-label="Watercolor and fine-line ink illustration of a white kitty paw with pink toe beans beneath a cherry blossom tree, with a gleaming solitaire diamond ring descending onto its finger">
         <div class="ring-aura" aria-hidden="true"></div>
 
         <span class="twinkle t1" aria-hidden="true">✦</span>
@@ -806,66 +983,61 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
         <span class="twinkle t4" aria-hidden="true">✦</span>
         <span class="twinkle t5" aria-hidden="true">⋆</span>
 
-        <svg class="ring-svg" viewBox="0 0 360 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ring-svg" viewBox="0 0 360 275" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <!-- Soft painterly texture for almond blossom tree -->
-            <filter id="oilBrush" x="-8%" y="-8%" width="116%" height="116%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="7" result="noise"/>
-              <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
-            </filter>
-
-            <!-- Radial wash for atmosphere -->
-            <radialGradient id="sageWash" cx="50%" cy="40%" r="60%">
-              <stop offset="0%" stop-color="rgba(135, 162, 126, 0.35)"/>
-              <stop offset="100%" stop-color="rgba(42, 56, 38, 0.15)"/>
+            <!-- Soft Watercolor Peach & Blush Background Wash -->
+            <radialGradient id="watercolorBg" cx="45%" cy="42%" r="65%">
+              <stop offset="0%" stop-color="#fff8f2" stop-opacity="0.7"/>
+              <stop offset="55%" stop-color="#f5d4c6" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#eab8a6" stop-opacity="0.5"/>
             </radialGradient>
 
-            <!-- Bark Gradient -->
-            <linearGradient id="barkGrad" x1="180" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#1f281b"/>
-              <stop offset="50%" stop-color="#2c3a27"/>
-              <stop offset="100%" stop-color="#3a4b34"/>
+            <!-- Watercolor Tree Trunk Wash -->
+            <linearGradient id="trunkWash" x1="20" y1="20" x2="115" y2="275" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#e3a591"/>
+              <stop offset="50%" stop-color="#d8927d"/>
+              <stop offset="100%" stop-color="#c97e69"/>
             </linearGradient>
 
             <!-- White Kitty Fur Gradient -->
-            <linearGradient id="furGrad" x1="180" y1="90" x2="180" y2="270" gradientUnits="userSpaceOnUse">
+            <linearGradient id="furGrad" x1="165" y1="125" x2="215" y2="275" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="55%" stop-color="#faf6f0"/>
-              <stop offset="100%" stop-color="#e8e0d5"/>
+              <stop offset="65%" stop-color="#fcf8f2"/>
+              <stop offset="100%" stop-color="#efe6dc"/>
             </linearGradient>
 
             <!-- Soft Pink Paw Pad Gradient -->
             <linearGradient id="beanGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#ffccd5"/>
-              <stop offset="100%" stop-color="#f39ca8"/>
+              <stop offset="0%" stop-color="#f7c2cb"/>
+              <stop offset="100%" stop-color="#e38d9c"/>
             </linearGradient>
 
             <!-- Ring Gold Metallic Gradient -->
-            <linearGradient id="goldMetallic" x1="162" y1="158" x2="198" y2="158" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#d49a44"/>
-              <stop offset="25%" stop-color="#fff2c4"/>
-              <stop offset="50%" stop-color="#f5cf7b"/>
-              <stop offset="75%" stop-color="#fff8e7"/>
-              <stop offset="100%" stop-color="#b87e2a"/>
+            <linearGradient id="goldMetallic" x1="196" y1="158" x2="226" y2="168" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#c98c32"/>
+              <stop offset="28%" stop-color="#fff0ba"/>
+              <stop offset="55%" stop-color="#ecc064"/>
+              <stop offset="80%" stop-color="#fff7de"/>
+              <stop offset="100%" stop-color="#a86e1e"/>
             </linearGradient>
 
-            <linearGradient id="goldBack" x1="162" y1="158" x2="198" y2="158" gradientUnits="userSpaceOnUse">
+            <linearGradient id="goldBack" x1="196" y1="158" x2="226" y2="168" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stop-color="#7a501a"/>
               <stop offset="50%" stop-color="#a87532"/>
               <stop offset="100%" stop-color="#694314"/>
             </linearGradient>
 
-            <!-- Diamond Gradient -->
+            <!-- Diamond Facet Gradient -->
             <linearGradient id="diamondFacet" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stop-color="#ffffff"/>
-              <stop offset="45%" stop-color="#e8f4fc"/>
-              <stop offset="80%" stop-color="#ffdbe4"/>
+              <stop offset="45%" stop-color="#dff1fc"/>
+              <stop offset="85%" stop-color="#ffd9e2"/>
               <stop offset="100%" stop-color="#ffffff"/>
             </linearGradient>
 
-            <!-- Glow Filter -->
+            <!-- Soft Sparkle Glow -->
             <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="2.5" result="blur"/>
+              <feGaussianBlur stdDeviation="2.2" result="blur"/>
               <feMerge>
                 <feMergeNode in="blur"/>
                 <feMergeNode in="SourceGraphic"/>
@@ -873,126 +1045,167 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
             </filter>
           </defs>
 
-          <!-- Background wash -->
-          <rect width="360" height="270" fill="url(#sageWash)"/>
+          <!-- Background Watercolor Wash & Cloud Blooms -->
+          <rect width="360" height="275" fill="url(#watercolorBg)"/>
+          <ellipse cx="145" cy="185" rx="34" ry="26" fill="#9fb092" opacity="0.28"/>
+          <ellipse cx="265" cy="235" rx="52" ry="30" fill="#9fb092" opacity="0.22"/>
+          <ellipse cx="290" cy="85" rx="68" ry="48" fill="#efb8a6" opacity="0.32"/>
 
-          <!-- PAINTERLY ALMOND BLOSSOM CANOPY OVERHEAD -->
-          <g class="tree-canopy" filter="url(#oilBrush)">
-            <path d="M-20 30 C40 10, 100 45, 170 25 C230 10, 290 35, 380 15" stroke="url(#barkGrad)" stroke-width="7" stroke-linecap="round"/>
-            <path d="M60 25 C110 55, 160 50, 220 30 C270 15, 310 40, 370 25" stroke="url(#barkGrad)" stroke-width="4.5" stroke-linecap="round"/>
-            <path d="M140 28 C180 65, 230 60, 280 42" stroke="#232d1f" stroke-width="3" stroke-linecap="round"/>
+          <!-- WATERCOLOR & FINE-LINE INK CHERRY BLOSSOM TREE (Left & Overhead, matching reference 3) -->
+          <g class="tree-canopy">
+            <!-- Watercolor Trunk & Branch Fill -->
+            <path d="M22 275 C32 210, 42 150, 35 78 C24 45, 10 20, -5 0 L28 0 C44 26, 54 52, 62 72 C108 58, 175 44, 245 14 L252 20 C192 52, 134 72, 74 88 C95 104, 134 114, 168 112 L166 118 C128 122, 92 115, 68 102 C76 162, 92 218, 114 275 Z"
+                  fill="url(#trunkWash)" opacity="0.82"/>
 
-            <g transform="translate(70, 25)"><circle cx="-4" cy="-2" r="4.5" fill="#f4f2ea"/><circle cx="4" cy="-2" r="4.5" fill="#e2decb"/><circle cx="0" cy="4" r="4.2" fill="#efece0"/><circle cx="0" cy="0" r="1.8" fill="#8f9a74"/></g>
-            <g transform="translate(115, 42)"><circle cx="-4" cy="-2" r="5" fill="#f5f3eb"/><circle cx="4" cy="-1" r="4.6" fill="#e4e0cf"/><circle cx="0" cy="4" r="4.8" fill="#f2efe4"/><circle cx="0" cy="0" r="2" fill="#8f9a74"/></g>
-            <g transform="translate(165, 25)"><circle cx="-4" cy="-2" r="4.8" fill="#f4f2ea"/><circle cx="4" cy="-2" r="4.8" fill="#e2decb"/><circle cx="0" cy="4" r="4.5" fill="#efece0"/><circle cx="0" cy="0" r="1.8" fill="#d4929f"/></g>
-            <g transform="translate(210, 35)"><circle cx="-4" cy="-2" r="5.2" fill="#f5f3eb"/><circle cx="4" cy="-2" r="4.8" fill="#e5e1d0"/><circle cx="0" cy="4" r="5" fill="#f4f2ea"/><circle cx="0" cy="0" r="2" fill="#8f9a74"/></g>
-            <g transform="translate(260, 22)"><circle cx="-4" cy="-2" r="4.5" fill="#f4f2ea"/><circle cx="4" cy="-2" r="4.5" fill="#e2decb"/><circle cx="0" cy="4" r="4.2" fill="#efece0"/><circle cx="0" cy="0" r="1.8" fill="#8f9a74"/></g>
-            <g transform="translate(300, 38)"><circle cx="-4" cy="-2" r="4.8" fill="#e6e3d3"/><circle cx="4" cy="-1" r="4.8" fill="#f5f3eb"/><circle cx="0" cy="4" r="4.5" fill="#dcd8c4"/><circle cx="0" cy="0" r="1.9" fill="#8f9a74"/></g>
+            <!-- Fine-Line Sepia Ink Trunk & Branch Outlines -->
+            <path d="M22 275 C32 210, 42 150, 35 78 C24 45, 10 20, -5 0" stroke="#2f221d" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M114 275 C92 218, 76 162, 68 102 C92 115, 128 122, 166 118" stroke="#2f221d" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M62 72 C108 58, 175 44, 245 14" stroke="#2f221d" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M74 88 C134 72, 192 52, 268 24" stroke="#2f221d" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Delicate inner bark sketch lines -->
+            <path d="M44 258 C50 212, 54 165, 50 112" stroke="#2f221d" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+            <path d="M64 245 C60 205, 58 175, 62 142" stroke="#2f221d" stroke-width="0.9" stroke-linecap="round" opacity="0.55"/>
 
-            <!-- Signature Single Hanging Pink Blossom -->
-            <line x1="180" y1="30" x2="180" y2="56" stroke="#2c3a27" stroke-width="1.2"/>
-            <g transform="translate(180, 62)">
-              <circle cx="0" cy="-4.5" r="4" fill="#f3dce1"/>
-              <circle cx="4.2" cy="-1.4" r="4" fill="#edd0d7"/>
-              <circle cx="2.6" cy="3.8" r="4" fill="#f5e3e7"/>
-              <circle cx="-2.6" cy="3.8" r="4" fill="#ebd0d6"/>
-              <circle cx="-4.2" cy="-1.4" r="4" fill="#f4dfe4"/>
-              <circle cx="0" cy="0" r="1.7" fill="#d4929f"/>
+            <!-- Hand-Drawn White Blossoms along Branches -->
+            <g transform="translate(126, 62)">
+              <circle cx="-5" cy="-3" r="6" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+              <circle cx="5" cy="-3" r="6" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+              <circle cx="6" cy="5" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+              <circle cx="-6" cy="5" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+              <circle cx="0" cy="7" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.2"/>
+              <circle cx="0" cy="1" r="2.2" fill="#d47286"/>
             </g>
+
+            <g transform="translate(184, 42)">
+              <circle cx="-5" cy="-3" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.15"/>
+              <circle cx="5" cy="-3" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.15"/>
+              <circle cx="5" cy="5" r="5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.15"/>
+              <circle cx="-5" cy="5" r="5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.15"/>
+              <circle cx="0" cy="1" r="2" fill="#8ea182"/>
+            </g>
+
+            <g transform="translate(232, 24)">
+              <circle cx="-4.5" cy="-2.5" r="4.8" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+              <circle cx="4.5" cy="-2.5" r="4.8" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+              <circle cx="4.5" cy="4.5" r="4.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+              <circle cx="-4.5" cy="4.5" r="4.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+              <circle cx="0" cy="1" r="1.8" fill="#d47286"/>
+            </g>
+
+            <g transform="translate(36, 118)">
+              <circle cx="-5" cy="-3" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.15"/>
+              <circle cx="5" cy="-3" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.15"/>
+              <circle cx="0" cy="5" r="5.5" fill="#fffcf8" stroke="#2f221d" stroke-width="1.15"/>
+              <circle cx="0" cy="0" r="2" fill="#8ea182"/>
+            </g>
+
+            <!-- Signature Standout Pink Cherry Blossom (under the branch, just like reference 1 & 3) -->
+            <g transform="translate(106, 128)">
+              <circle cx="-6" cy="-4" r="7.2" fill="#eea0b0" stroke="#2f221d" stroke-width="1.35"/>
+              <circle cx="6" cy="-4" r="7.2" fill="#e38b9d" stroke="#2f221d" stroke-width="1.35"/>
+              <circle cx="7" cy="5.5" r="6.8" fill="#f3b2bf" stroke="#2f221d" stroke-width="1.35"/>
+              <circle cx="-7" cy="5.5" r="6.8" fill="#e792a3" stroke="#2f221d" stroke-width="1.35"/>
+              <circle cx="0" cy="8.5" r="6.8" fill="#eea0b0" stroke="#2f221d" stroke-width="1.35"/>
+              <circle cx="0" cy="1" r="2.6" fill="#4f2c33"/>
+            </g>
+
+            <!-- Drifting Ink-Outlined Petals -->
+            <path d="M262 152 C270 148, 276 154, 272 162 C264 162, 260 158, 262 152 Z" fill="#fffcf8" stroke="#2f221d" stroke-width="1.1"/>
+            <path d="M238 228 C244 224, 249 229, 246 236 C239 236, 236 232, 238 228 Z" fill="#f2b2bf" stroke="#2f221d" stroke-width="1.1"/>
           </g>
 
-          <!-- WHITE KITTY PAW WITH PINK TOE BEANS (Inspired by reference image) -->
+          <!-- WHITE FLUFFY KITTY PAW WITH PINK TOE BEANS (Angled Upward Right like Reference 3) -->
           <g class="paw-group">
-            <!-- Main Paw & Leg Silhouette -->
-            <path d="M114 270
-                     C122 232, 134 198, 136 164
-                     C136 146, 133 130, 141 118
-                     C147 109, 157 110, 161 116
-                     C164 103, 174 96, 182 96
-                     C191 96, 198 104, 199 116
-                     C205 108, 216 109, 221 118
-                     C227 129, 224 146, 224 164
-                     C226 198, 238 232, 246 270 Z"
-                  fill="url(#furGrad)" stroke="#232c20" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Fluffy Arm & Paw Silhouette in Fine-Line Sepia Ink -->
+            <path d="M98 275
+                     C122 246, 146 216, 160 190
+                     C163 176, 166 160, 177 151
+                     C184 146, 193 148, 196 155
+                     C201 143, 211 139, 219 142
+                     C226 144, 230 152, 229 161
+                     C236 155, 245 158, 248 166
+                     C251 174, 247 184, 241 190
+                     C247 192, 250 201, 246 209
+                     C242 216, 233 221, 224 224
+                     C208 242, 190 258, 174 275 Z"
+                  fill="url(#furGrad)" stroke="#2f221d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
-            <!-- Soft Fur Highlight & Subtle Shading -->
-            <path d="M148 124 C146 155, 144 205, 134 265" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.75"/>
-            <path d="M212 126 C214 158, 216 208, 226 265" stroke="#d8cfc2" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+            <!-- Fluffy Fur Sketch Strokes along Arm Edges -->
+            <path d="M114 264 L120 254 M128 246 L133 236 M142 227 L146 218" stroke="#2f221d" stroke-width="1.1" stroke-linecap="round" opacity="0.65"/>
+            <path d="M184 265 L189 256 M199 249 L204 240 M214 233 L219 225" stroke="#2f221d" stroke-width="1.1" stroke-linecap="round" opacity="0.65"/>
 
-            <!-- Outer Left Toe Bean -->
-            <ellipse cx="147" cy="134" rx="6.5" ry="8.5" transform="rotate(-14 147 134)"
-                     fill="url(#beanGrad)" stroke="#232c20" stroke-width="2.1"/>
-            <ellipse cx="145.5" cy="131.5" rx="2" ry="3" transform="rotate(-14 145.5 131.5)" fill="#fff0f3" opacity="0.7"/>
+            <!-- Small Pink Wrist Pad -->
+            <ellipse cx="174" cy="233" rx="5.5" ry="4.5" transform="rotate(-32 174 233)"
+                     fill="url(#beanGrad)" stroke="#2f221d" stroke-width="1.3"/>
 
-            <!-- Inner Left-Center Toe Bean -->
-            <ellipse cx="165" cy="122" rx="6" ry="8" transform="rotate(-6 165 122)"
-                     fill="url(#beanGrad)" stroke="#232c20" stroke-width="2.1"/>
-            <ellipse cx="163.5" cy="119.5" rx="1.8" ry="2.8" transform="rotate(-6 163.5 119.5)" fill="#fff0f3" opacity="0.7"/>
+            <!-- Toe Bean 1 (Left-most) -->
+            <ellipse cx="182" cy="166" rx="5.5" ry="7.2" transform="rotate(14 182 166)"
+                     fill="url(#beanGrad)" stroke="#2f221d" stroke-width="1.4"/>
+            <ellipse cx="181" cy="164" rx="1.6" ry="2.4" transform="rotate(14 181 164)" fill="#fff2f5" opacity="0.8"/>
 
-            <!-- Inner Right-Center Toe Bean -->
-            <ellipse cx="184" cy="121" rx="6" ry="8" transform="rotate(5 184 121)"
-                     fill="url(#beanGrad)" stroke="#232c20" stroke-width="2.1"/>
-            <ellipse cx="182.5" cy="118.5" rx="1.8" ry="2.8" transform="rotate(5 182.5 118.5)" fill="#fff0f3" opacity="0.7"/>
+            <!-- Toe Bean 2 (Ring Finger Toe - receives the solitaire ring!) -->
+            <ellipse cx="212" cy="153" rx="5.6" ry="7.4" transform="rotate(24 212 153)"
+                     fill="url(#beanGrad)" stroke="#2f221d" stroke-width="1.4"/>
+            <ellipse cx="211" cy="151" rx="1.6" ry="2.4" transform="rotate(24 211 151)" fill="#fff2f5" opacity="0.8"/>
 
-            <!-- Outer Right Toe Bean -->
-            <ellipse cx="203" cy="131" rx="6.5" ry="8.2" transform="rotate(15 203 131)"
-                     fill="url(#beanGrad)" stroke="#232c20" stroke-width="2.1"/>
-            <ellipse cx="201.5" cy="128.5" rx="2" ry="2.8" transform="rotate(15 201.5 128.5)" fill="#fff0f3" opacity="0.7"/>
+            <!-- Toe Bean 3 (Right-upper) -->
+            <ellipse cx="232" cy="171" rx="5.6" ry="7.2" transform="rotate(34 232 171)"
+                     fill="url(#beanGrad)" stroke="#2f221d" stroke-width="1.4"/>
+            <ellipse cx="231" cy="169" rx="1.6" ry="2.4" transform="rotate(34 231 169)" fill="#fff2f5" opacity="0.8"/>
 
-            <!-- Central Heart/Lobed Pink Paw Pad -->
-            <path d="M179 144
-                     C169 144, 160 151, 160 161
-                     C160 170, 167 175, 173 172
-                     C176 170, 178 168, 180 168
-                     C182 168, 184 170, 187 172
-                     C193 175, 200 170, 200 161
-                     C200 151, 190 144, 179 144 Z"
-                  fill="url(#beanGrad)" stroke="#232c20" stroke-width="2.2" stroke-linejoin="round"/>
-            <ellipse cx="173" cy="152" rx="4.5" ry="2.5" transform="rotate(-18 173 152)" fill="#fff0f3" opacity="0.65"/>
+            <!-- Toe Bean 4 (Outer-right) -->
+            <ellipse cx="233" cy="197" rx="5.4" ry="6.8" transform="rotate(44 233 197)"
+                     fill="url(#beanGrad)" stroke="#2f221d" stroke-width="1.4"/>
+            <ellipse cx="232" cy="195" rx="1.5" ry="2.2" transform="rotate(44 232 195)" fill="#fff2f5" opacity="0.8"/>
+
+            <!-- Central Heart-Shaped Pink Paw Pad -->
+            <path d="M196 184
+                     C188 188, 184 197, 189 204
+                     C193 210, 200 210, 204 206
+                     C206 204, 207 202, 209 201
+                     C211 200, 213 201, 216 201
+                     C222 201, 226 195, 222 188
+                     C217 180, 205 180, 196 184 Z"
+                  fill="url(#beanGrad)" stroke="#2f221d" stroke-width="1.5" stroke-linejoin="round"/>
+            <ellipse cx="195" cy="192" rx="3.8" ry="2.1" transform="rotate(-24 195 192)" fill="#fff2f5" opacity="0.75"/>
           </g>
 
-          <!-- Shockwave Ripples Centered on Ring Placement (181, 184) -->
-          <ellipse class="settle-ripple" cx="181" cy="184" rx="24" ry="10" stroke="#f7eed2" stroke-width="1.6" fill="none"/>
-          <ellipse class="settle-ripple r2" cx="181" cy="184" rx="24" ry="10" stroke="#f2b6c2" stroke-width="1.1" fill="none"/>
+          <!-- Shockwave Ripples Centered on Ring Placement (211, 162) -->
+          <ellipse class="settle-ripple" cx="211" cy="162" rx="22" ry="10" transform="rotate(24 211 162)" stroke="#d99f4c" stroke-width="1.5" fill="none"/>
+          <ellipse class="settle-ripple r2" cx="211" cy="162" rx="22" ry="10" transform="rotate(24 211 162)" stroke="#d47286" stroke-width="1.1" fill="none"/>
 
-          <!-- ELEGANT SOLITAIRE DIAMOND RING (Positioned at 181, 184 on the kitty's paw) -->
+          <!-- ELEGANT SOLITAIRE DIAMOND RING (Placed on Kitty's Finger Toe at 211, 162) -->
           <g class="ring-group">
-            <!-- Back Band Slipping Behind Fur -->
-            <path d="M162 182 C162 177, 200 177, 200 182" stroke="url(#goldBack)" stroke-width="3.6" fill="none"/>
+            <g transform="translate(211, 162) rotate(24)">
+              <!-- Back Band Slipping Behind Fur -->
+              <path d="M-12 -1 C-12 -5, 12 -5, 12 -1" stroke="url(#goldBack)" stroke-width="2.8" fill="none"/>
 
-            <!-- Front Gleaming Gold Band Wrapping Over Paw -->
-            <path d="M161 183 C161 190, 200 190, 200 183" stroke="url(#goldMetallic)" stroke-width="4.8" stroke-linecap="round" fill="none" filter="url(#glow)"/>
-            <!-- Metallic Specular Highlight -->
-            <path d="M164 184.5 C168 188, 194 188, 197 184.5" stroke="#ffffff" stroke-width="1.25" stroke-linecap="round" fill="none" opacity="0.92"/>
+              <!-- Front Gleaming Gold Band Wrapping Over Toe -->
+              <path d="M-13 0 C-13 5.5, 13 5.5, 13 0" stroke="url(#goldMetallic)" stroke-width="3.8" stroke-linecap="round" fill="none" filter="url(#glow)"/>
+              <path d="M-13 0 C-13 5.5, 13 5.5, 13 0" stroke="#2f221d" stroke-width="0.7" stroke-linecap="round" fill="none" opacity="0.65"/>
+              <!-- Metallic Specular Highlight -->
+              <path d="M-10 1.2 C-6 3.8, 6 3.8, 10 1.2" stroke="#ffffff" stroke-width="1.1" stroke-linecap="round" fill="none" opacity="0.95"/>
 
-            <!-- Solitaire Diamond Setting (Centered at 181, 176) -->
-            <g transform="translate(181, 176)">
-              <!-- 4 Gold Prongs -->
-              <line x1="-5" y1="4" x2="-7" y2="-2" stroke="#fff5d6" stroke-width="1.35"/>
-              <line x1="5" y1="4" x2="7" y2="-2" stroke="#fff5d6" stroke-width="1.35"/>
-              <line x1="-2" y1="4" x2="-3" y2="-4" stroke="#d49a44" stroke-width="1.15"/>
-              <line x1="2" y1="4" x2="3" y2="-4" stroke="#d49a44" stroke-width="1.15"/>
+              <!-- Solitaire Diamond Setting -->
+              <g transform="translate(0, -5)">
+                <!-- Gold Prongs -->
+                <line x1="-4" y1="3" x2="-5.5" y2="-1.5" stroke="#d99f4c" stroke-width="1.2"/>
+                <line x1="4" y1="3" x2="5.5" y2="-1.5" stroke="#d99f4c" stroke-width="1.2"/>
 
-              <!-- Diamond Geometry & Facets -->
-              <g filter="url(#glow)">
-                <!-- Pavilion / Base -->
-                <polygon points="0,5 -8,-1 8,-1" fill="#cbe3f7" opacity="0.88"/>
-                <!-- Crown -->
-                <polygon points="-8,-1 8,-1 5,-7 -5,-7" fill="url(#diamondFacet)"/>
-                <!-- Table (Top flat face) -->
-                <polygon points="-4,-7 4,-7 3,-9 -3,-9" fill="#ffffff"/>
-                <!-- Facet Lines -->
-                <line x1="-5" y1="-7" x2="0" y2="-1" stroke="#ffffff" stroke-width="0.7"/>
-                <line x1="5" y1="-7" x2="0" y2="-1" stroke="#ffffff" stroke-width="0.7"/>
-                <line x1="0" y1="-7" x2="0" y2="-1" stroke="#ffffff" stroke-width="0.7"/>
-                <line x1="-8" y1="-1" x2="0" y2="5" stroke="#a6d2f5" stroke-width="0.6"/>
-                <line x1="8" y1="-1" x2="0" y2="5" stroke="#a6d2f5" stroke-width="0.6"/>
-              </g>
+                <!-- Diamond Geometry & Ink Outline -->
+                <g filter="url(#glow)">
+                  <polygon points="0,4 -6.5,-1 6.5,-1" fill="#cbe3f7" stroke="#2f221d" stroke-width="0.75"/>
+                  <polygon points="-6.5,-1 6.5,-1 4,-5.5 -4,-5.5" fill="url(#diamondFacet)" stroke="#2f221d" stroke-width="0.75"/>
+                  <polygon points="-3.2,-5.5 3.2,-5.5 2.4,-7 -2.4,-7" fill="#ffffff"/>
+                  <line x1="-4" y1="-5.5" x2="0" y2="-1" stroke="#2f221d" stroke-width="0.45" opacity="0.5"/>
+                  <line x1="4" y1="-5.5" x2="0" y2="-1" stroke="#2f221d" stroke-width="0.45" opacity="0.5"/>
+                </g>
 
-              <!-- Star Burst Sparkle Glint -->
-              <g class="diamond-glint" transform="translate(0, -5)">
-                <path d="M0 -11 L2 -2 L11 0 L2 2 L0 11 L-2 2 L-11 0 L-2 -2 Z" fill="#ffffff"/>
-                <circle cx="0" cy="0" r="1.8" fill="#fff9e6"/>
+                <!-- Star Burst Sparkle Glint -->
+                <g class="diamond-glint" transform="translate(0, -4)">
+                  <path d="M0 -10 L1.8 -1.8 L10 0 L1.8 1.8 L0 10 L-1.8 1.8 L-10 0 L-1.8 -1.8 Z" fill="#ffffff" stroke="#2f221d" stroke-width="0.45"/>
+                  <circle cx="0" cy="0" r="1.5" fill="#fff7d6"/>
+                </g>
               </g>
             </g>
           </g>
@@ -1002,7 +1215,7 @@ main{position:relative;z-index:1;width:100%;display:grid;place-items:center}
       </div>
 
       <p class="promise-sub">
-        Every mile between us is only temporary, <em>my Anan</em>. Hold onto my heart until I return from Dhaka and slip this onto your hand myself.
+        Every mile between us is only temporary, <em style="color:var(--rose-deep)">my Anan</em>. Hold onto my heart until I return from Dhaka and slip this onto your hand myself.
       </p>
 
       <div class="rule">❀</div>
